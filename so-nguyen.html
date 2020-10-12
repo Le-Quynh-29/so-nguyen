@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hien thi cac so nguyen to</title>
+</head>
+<body>
+<script>
+
+    let n = 2;
+    let count = 1;
+    while (n > 0){
+        if (isSoNT(n)){
+            document.write("Day la so thu " + count+ " nt: " + n + "<br>");
+            if (count == 20){
+                break;
+            }
+            count++;
+        }
+
+        n++;
+    }
+
+
+
+
+    function isSoNT(n){
+        for (let i = 2; i <= n/2; i++) {
+            if (n % i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+</script>
+</body>
+</html>
